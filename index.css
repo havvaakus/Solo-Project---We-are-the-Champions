@@ -1,0 +1,86 @@
+  html, body {
+    background: black;
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+    color: #FFF;
+    font-family: Josefin Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  img {
+    display: block;
+    max-width: 150px;
+    margin: auto;
+  }
+
+  #endorsement {
+    
+    border-radius: 8px;
+    background: #444059;
+    border: solid 0px #444059;
+    width:450px;
+    height: 200px;
+    color: #8F8F8F;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .container {
+    display: block;
+    gap: 15px;
+    justify-content: center;
+    margin: 10px;
+    
+  }
+
+  #from, #to {
+    color: #8F8F8F;
+    background: #444059;
+    border-radius: 8px;
+    padding: 12px;
+    border: 2px solid #444059;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 197px;
+    height: 27px;
+  }
+
+#publish {
+    background: #28A9F1;
+    width: 317px;
+    height: 61px;
+    border: solid 1px #28A9F1;
+    border-radius: 8px;
+    margin: 10px;
+    color: #04131C;
+    text-align: center;
+    font-family: Josefin Sans;
+    font-size: 30px;
+    font-weight: 700;
+
+    width: 450px;
+    height: 80px;
+    justify-content: center;
+}
+
+#text-endorsement {
+    color: #FFF;
+    font-family: Josefin Sans;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+
