@@ -17,7 +17,7 @@
     margin: auto;
   }
 
-  #endorsement {
+  #input-field {
     
     border-radius: 8px;
     background: #444059;
@@ -42,7 +42,7 @@
 
   }
 
-  #from, #to {
+  #from-el, #to-el {
     color: #8F8F8F;
     background: #444059;
     border-radius: 8px;
@@ -59,7 +59,7 @@
   
   }
 
-#publish {
+#publish-el {
     background: #28A9F1;
     width: 317px;
     height: 61px;
@@ -72,7 +72,7 @@
     font-size: 30px;
     font-weight: 700;
 
-    width: 450px;
+    width: 510px;
     height: 80px;
     justify-content: center;
 }
