@@ -30,30 +30,33 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    padding: 20px 30px;
   }
 
   .container {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     gap: 15px;
-    justify-content: center;
     margin: 10px;
-    
+    justify-content: center;
+
   }
 
   #from, #to {
     color: #8F8F8F;
     background: #444059;
     border-radius: 8px;
-    padding: 12px;
-    border: 2px solid #444059;
+    padding: 9px;
+    border: 8px solid #444059;
     text-align: center;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    width: 197px;
-    height: 27px;
+    width: 213px;
+    height: 25px;
+  
   }
 
 #publish {
