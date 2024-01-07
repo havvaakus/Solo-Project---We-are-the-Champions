@@ -17,9 +17,25 @@ const endorsementsListEl = document.getElementById("endorsements-list")
 
 
 publishButtonEl.addEventListener("click", function() {
-    let inputValue = inputFieldEl.value
+    let endorsementField = inputFieldEl.value
+    let fromField = fromEl.value
+    let toField = toEl.value
+
+    const entry = {
+        "Endorsement": endorsementField,
+        "From": fromField,
+        "To": toField
+    }
     
-    push(endorsementsListInDB, inputValue)
+    const json = JSON.stringify(entry)
+
+    push(endorsementsListInDB, json)
+    .then(() => {
+        console.log("Entry added to the database!");
+    })
+    .catch((error) => {
+        console.error("Error adding entry: ", error);
+    });
     
     clearInputFieldEl()
 })
@@ -48,23 +64,45 @@ function clearEndorsementsListEl() {
 
 function clearInputFieldEl() {
     inputFieldEl.value = ""
+    fromEl.value = ""
+    toEl.value = ""
 }
+
+// Your Firebase and initialization code remain unchanged...
+
+// Rest of your existing code...
 
 function appendItemToEndorsementsListEl(item) {
-    
+    let itemID = item[0];
+    let itemValue = JSON.parse(item[1]);
 
-    let itemID = item[0]
-    let itemValue = item[1]
-    
-    // bosluk girildigi zaman bos kutu eklememesi icin
-    if (item[1].trim() === '') {
-        console.error("Add to endorsement is failed: Empty Text");
-        return;
-    }
+    let newEl = document.createElement("li");
 
-    let newEl = document.createElement("li")
-    
-    newEl.textContent = itemValue
-    endorsementsListEl.append(newEl)
+    let toField = "To " + itemValue.To;
+    let endorsementField = itemValue.Endorsement;
+    let fromField = "From " + itemValue.From;
+
+    // Wrapping the fields in spans for styling
+    let toSpan = document.createElement("span");
+    let endorsementSpan = document.createElement("span");
+    let fromSpan = document.createElement("span");
+
+    toSpan.innerHTML = toField + "<br>";
+    endorsementSpan.innerHTML = endorsementField + "<br>";
+    fromSpan.innerHTML = fromField + "<br>";
+
+    // Applying different font sizes using CSS classes
+    toSpan.classList.add("to-field");
+    endorsementSpan.classList.add("endorsement-field");
+    fromSpan.classList.add("from-field");
+
+    // Appending spans to the new list item
+    newEl.appendChild(toSpan);
+    newEl.appendChild(endorsementSpan);
+    newEl.appendChild(fromSpan);
+
+    endorsementsListEl.appendChild(newEl);
 }
+
+
 
